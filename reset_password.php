@@ -17,9 +17,8 @@
     <?php
         include 'dbcon.php'; 
         if(isset($_POST['submit'])){
-            // if(isset($_GET['token'])){
-                $token='$2y$10$BWmtWsfHZqBQXc2S/hP/Ou0RvHDgsVXysj5.HYL7p/UzBja/im1c6';
-                // $token=$_GET['token'];
+            if(isset($_GET['token'])){
+                $token=$_GET['token'];
             
             $newpass=mysqli_real_escape_string($con, $_POST['newpass']);
             $cnewpass=mysqli_real_escape_string($con, $_POST['cnewpass']);
@@ -60,7 +59,7 @@
             
             
 
-        // }
+        }
     }
     ?>
                     <div class="container">
